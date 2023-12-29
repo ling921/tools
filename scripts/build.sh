@@ -6,4 +6,4 @@ chmod +x dotnet-install.sh
 ./dotnet-install.sh -c 8.0 -InstallDir ./dotnet
 ./dotnet/dotnet --version
 
-./dotnet/dotnet publish ./src/Ling.Tools.Web.Wasm/Ling.Tools.Web.Wasm.csproj -c Release -o output
+./dotnet/dotnet publish ./src/Ling.Tools.Web.Wasm/Ling.Tools.Web.Wasm.csproj -c Release -p:PublishTrimmed=true -o output
