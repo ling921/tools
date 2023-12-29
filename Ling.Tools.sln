@@ -21,6 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ling.Tools.Core", "src\Ling
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{DC48195C-9A1E-4AC0-9EA5-A4F6CB18013C}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\build.sh = scripts\build.sh
 		scripts\watch-sass.ps1 = scripts\watch-sass.ps1
 	EndProjectSection
 EndProject
@@ -57,8 +58,8 @@ Global
 		{4D0BDCEA-B12E-4235-9C58-93BDBA4880E6} = {E510FFAC-740C-4CC7-B480-FA3A90B60EAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ConfirmAddLanguageFile = False
-		RESX_AutoCreateNewLanguageFiles = True
 		SolutionGuid = {65DA7671-4D98-4681-AD39-ADB61B46BD37}
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_ConfirmAddLanguageFile = False
 	EndGlobalSection
 EndGlobal
