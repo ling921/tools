@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+    <RootNamespace>Ling.Tools.Web.Wasm</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ling.Tools.Web.Shared\Ling.Tools.Web.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <Target Name="BeforeBuild" BeforeTargets="Build">
+    <Exec Command="sass --style=compressed --no-source-map $(ProjectDir)">
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+    <Message Condition="'$(ExitCode)' != '0'" Text="Saas compiled failed." Importance="High" />
+    <Message Condition="'$(ExitCode)' == '0'" Text="Saas compiled successfully." Importance="normal" />
+  </Target>
+
+</Project>

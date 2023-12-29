@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Ling.Blazor" />
+    <PackageReference Include="MessagePack" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+    <PackageReference Include="Microsoft.Extensions.Localization" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Emoji" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\Compiler\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ling.Tools.Core\Ling.Tools.Core.csproj" />
+  </ItemGroup>
+
+</Project>

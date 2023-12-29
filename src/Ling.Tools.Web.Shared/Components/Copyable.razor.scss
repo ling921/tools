@@ -1,0 +1,12 @@
+﻿.copyable {
+    ::deep .copyable-btn {
+        display: none;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    &:hover ::deep .copyable-btn {
+        display: inline-block;
+    }
+}

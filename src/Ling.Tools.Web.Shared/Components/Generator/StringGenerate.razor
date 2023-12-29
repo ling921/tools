@@ -1,0 +1,29 @@
+﻿@inherits ToolComponentBase<StringGenerateState>
+
+<Condition Predicate="State is not null">
+    <True>
+        <div class="tool-form-item">
+            <FluentCheckbox @bind-Value="State!.HasNumber" Label=@L["Number"] />
+            <FluentCheckbox @bind-Value="State.HasLowercaseLetter" Label=@L["Lowercase"] />
+            <FluentCheckbox @bind-Value="State.HasUppercaseLetter" Label=@L["Uppercase"] />
+        </div>
+
+        <div class="tool-form-item">
+            <FluentNumberField @bind-Value="State.Length" Label="@L["Length"]" Min="0" Max="512" />
+        </div>
+
+        <div class="tool-form-item">
+            <FluentNumberField @bind-Value="State.Times" Label="@L["Times"]" Min="0" Max="128" />
+            <FluentButton Appearance="Appearance.Accent" OnClick="Generate">
+                @L["Generate"]
+            </FluentButton>
+        </div>
+
+        <div class="tool-result">
+            <GeneratedDisplay Values="State.LastGenerated" />
+        </div>
+    </True>
+    <False>
+        <div>Loading...</div>
+    </False>
+</Condition>

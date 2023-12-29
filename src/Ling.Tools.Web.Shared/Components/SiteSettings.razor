@@ -1,0 +1,5 @@
+﻿@inject IStringLocalizer L
+
+<FluentButton Appearance="Appearance.Lightweight" OnClick="OpenSiteSettingsAsync" Title=@L["Site settings"]>
+    <FluentIcon Value="@(new Icons.Regular.Size20.Settings())" Color="Color.Neutral" Title=@L["Site settings"] />
+</FluentButton>

@@ -1,0 +1,28 @@
+﻿@inherits FluentInputBase<TEnum>
+@typeparam TEnum
+
+<FluentRadioGroup TValue="TEnum"
+                  @bind-Value="Value"
+                  Id="@Id"
+                  Name="@Name"
+                  DisplayName="@DisplayName"
+                  Required="@Required"
+                  Orientation="@Orientation"
+                  Label="@Label"
+                  LabelTemplate="@(LabelTemplate!)"
+                  AriaLabel="@AriaLabel"
+                  Class="@Class"
+                  Style="@Style"
+                  Autofocus="@Autofocus"
+                  ReadOnly="@ReadOnly"
+                  Disabled="@Disabled"
+                  AdditionalAttributes="@AdditionalAttributes">
+    <Condition Predicate="_isNullable">
+        <FluentRadio TValue="TEnum" Value="default" Label="null" />
+    </Condition>
+    <ForEach Source="Options">
+        <Template>
+            <FluentRadio TValue="TEnum" Value="@context.Key" Label="@context.Value" />
+        </Template>
+    </ForEach>
+</FluentRadioGroup>

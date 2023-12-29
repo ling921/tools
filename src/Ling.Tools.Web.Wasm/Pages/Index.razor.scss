@@ -1,0 +1,37 @@
+﻿$search-margin-y: 40px; 
+$search-height: 56px;
+$search-font-size: 18px;
+//$search-margin-x: calc(max((100% - 900px) / 2, 0));
+
+.tool-search {
+    margin: $search-margin-y;
+
+    ::deep {
+        fluent-search {
+            width: 100%;
+
+            &::part(root) {
+                height: $search-height;
+            }
+
+            &::part(start) {
+                margin-inline-start: calc(($search-height - 24px) / 2);
+                margin-inline-end: max(($search-height - 24px * 2) / 2, 0);
+            }
+
+            &::part(input-wrapper) {
+            }
+
+            &::part(control) {
+                height: $search-height;
+                font-size: $search-font-size;
+            }
+
+            &::part(clear-button) {
+                width: $search-height - 4px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

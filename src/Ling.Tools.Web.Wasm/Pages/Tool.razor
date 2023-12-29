@@ -1,0 +1,16 @@
+﻿<PageTitle>
+    @Title - Ling.Tools
+</PageTitle>
+
+<div>
+    <Condition Predicate="_info is not null">
+        <True>
+            <DynamicComponent Type="_info!.ComponentType" />
+        </True>
+        <False>
+            <div>
+                <p>Tool not found</p>
+            </div>
+        </False>
+    </Condition>
+</div>

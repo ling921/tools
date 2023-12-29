@@ -1,0 +1,22 @@
+﻿@inject IStringLocalizer L
+
+<FluentButton Appearance="Appearance.Lightweight" OnClick="OpenNotificationCenterAsync" Title=@L["Notification center"]>
+    <Condition Predicate="@(MessageService.Count(AppDefaults.MESSAGES_NOTIFICATION_CENTER) > 0)">
+        <True>
+            <FluentCounterBadge Count="@MessageService.Count(AppDefaults.MESSAGES_NOTIFICATION_CENTER)"
+                                Max="9"
+                                ShowOverflow="true"
+                                BackgroundColor="@Color.Error"
+                                Color="Color.Fill"
+                                Appearance="Appearance.Accent"
+                                ShowZero=true>
+                <ChildContent>
+                    <FluentIcon Value="@(new Icons.Regular.Size20.Alert())" Color="Color.Neutral" Title=@L["Notification center"] />
+                </ChildContent>
+            </FluentCounterBadge>
+        </True>
+        <False>
+            <FluentIcon Value="@(new Icons.Regular.Size20.Alert())" Color="Color.Neutral" Title=@L["Notification center"] />
+        </False>
+    </Condition>
+</FluentButton>

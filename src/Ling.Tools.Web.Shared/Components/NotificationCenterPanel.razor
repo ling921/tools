@@ -1,0 +1,17 @@
+﻿@inject IStringLocalizer L
+
+<div>
+
+    <FluentStack>
+        <FluentSpacer />
+
+        <FluentAnchor Appearance="@Appearance.Hypertext" Href="" @onclick="@(e => MessageService.Clear(AppDefaults.MESSAGES_NOTIFICATION_CENTER) )">
+            @L["Dismiss all"]
+        </FluentAnchor>
+    </FluentStack>
+
+    <br />
+
+    <FluentMessageBarProvider Section="@AppDefaults.MESSAGES_NOTIFICATION_CENTER" MaxMessageCount="-1" Type="@MessageType.Notification" />
+
+</div>

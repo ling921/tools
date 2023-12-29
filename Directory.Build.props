@@ -1,0 +1,21 @@
+<Project>
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>CS1591;RCS1123;</NoWarn>
+
+    <VersionFile>0.1.0</VersionFile>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <AssemblyVersion>$(VersionFile)</AssemblyVersion>
+    <FileVersion>$(VersionFile)</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>ling921</Authors>
+    <Copyright>ling921. All rights reserved.</Copyright>
+    <Owners>ling921</Owners>
+  </PropertyGroup>
+</Project>

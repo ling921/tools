@@ -1,0 +1,21 @@
+﻿@inherits FluentComponentBase
+@inject IStringLocalizer L
+
+<div @ref=Element class="@ClassValue" style="@StyleValue" @attributes="AdditionalAttributes">
+    <Condition Predicate="Text is not null">
+        <True>
+            @Text
+        </True>
+        <False>
+            <div @ref=_contentElement style="@ChildContentStyleValue">@ChildContent</div>
+        </False>
+    </Condition>
+
+    <FluentBadge Circular=true
+                 Appearance="Appearance"
+                 Class="@CopyBtnClassValue"
+                 Style="@CopyBtnStyleValue"
+                 OnClick="CopyContent">
+        @L[_copyBtnText]
+    </FluentBadge>
+</div>

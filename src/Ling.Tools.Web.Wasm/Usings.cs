@@ -1,0 +1,12 @@
+﻿global using System.Globalization;
+global using Microsoft.AspNetCore.Components;
+global using Microsoft.AspNetCore.Components.Web;
+global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+global using Microsoft.Extensions.Localization;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.FluentUI.AspNetCore.Components;
+global using Ling.Tools.Web.Shared.Components;
+global using Ling.Tools.Web.Shared.Infrastructure;
+global using Ling.Tools.Web.Shared.Resources;
+global using Ling.Tools.Web.Shared.Services;
+global using Ling.Tools.Web.Wasm;
