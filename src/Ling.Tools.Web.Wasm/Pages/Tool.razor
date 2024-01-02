@@ -2,6 +2,18 @@
     @Title - Ling.Tools
 </PageTitle>
 
+<div class="breadcrumb">
+    <FluentBreadcrumb>
+        <FluentBreadcrumbItem Href="/">
+            Home
+            <FluentIcon Value="@(new Icons.Regular.Size16.Home())" Color="@Color.Neutral" Slot="start" />
+        </FluentBreadcrumbItem>
+        <FluentBreadcrumbItem>
+            @Title
+        </FluentBreadcrumbItem>
+    </FluentBreadcrumb>
+</div>
+
 <div>
     <Condition Predicate="_info is not null">
         <True>

@@ -1,4 +1,4 @@
-using Ling.Tools.Generator;
+using Ling.Tools.Generate;
 
 namespace Ling.Tools.Web.Shared.Components.Generator;
 
