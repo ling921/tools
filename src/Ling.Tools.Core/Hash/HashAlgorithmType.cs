@@ -1,6 +1,9 @@
 ﻿namespace Ling.Tools.Hash;
 
-public enum HashType
+/// <summary>
+/// Represents a hashing algorithm type.
+/// </summary>
+public enum HashAlgorithmType
 {
     SHA1,
     SHA256,
