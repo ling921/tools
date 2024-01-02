@@ -11,7 +11,7 @@
     <VersionSuffix></VersionSuffix>
     <AssemblyVersion>$(VersionFile)</AssemblyVersion>
     <FileVersion>$(VersionFile)</FileVersion>
-    <PublishTrimmed>true</PublishTrimmed>
+    <!--<PublishTrimmed>true</PublishTrimmed>-->
   </PropertyGroup>
 
   <PropertyGroup>
