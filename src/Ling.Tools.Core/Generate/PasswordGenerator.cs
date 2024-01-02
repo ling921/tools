@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text;
 
-namespace Ling.Tools.Generator;
+namespace Ling.Tools.Generate;
 
 [DebuggerDisplay("{DebuggerDisplay,nq}")]
 public sealed class PasswordGenerator : IGenerator<string>

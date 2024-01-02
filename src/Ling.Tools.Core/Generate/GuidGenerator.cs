@@ -1,4 +1,4 @@
-using Ling.Tools.Generator;
+using Ling.Tools.Generate;
 using System.Diagnostics;
 using System.Text;
 

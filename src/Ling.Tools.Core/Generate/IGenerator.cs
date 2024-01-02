@@ -1,4 +1,4 @@
-﻿namespace Ling.Tools.Generator;
+﻿namespace Ling.Tools.Generate;
 
 /// <summary>
 /// Interface for generating a <typeparamref name="T"/> value.

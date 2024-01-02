@@ -1,4 +1,4 @@
-﻿namespace Ling.Tools.Generator;
+﻿namespace Ling.Tools.Generate;
 
 public sealed class DoubleGenerator : NumberGeneratorBase<DoubleGenerator, double>
 {

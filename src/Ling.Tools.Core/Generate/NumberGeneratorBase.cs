@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Numerics;
 
-namespace Ling.Tools.Generator;
+namespace Ling.Tools.Generate;
 
 [DebuggerDisplay("Range: [{MinValue}, {MaxValue})")]
 public abstract class NumberGeneratorBase<TGenerator, T> : IGenerator<T>
