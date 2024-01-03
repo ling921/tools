@@ -1,1 +1,0 @@
-.breadcrumb{font-size:1.2rem}::deep .tool-form-item{display:flex}::deep .tool-form-item+.tool-form-item{margin-top:1.2rem}::deep .tool-form-item>*:not(:last-child){margin-right:.5rem}::deep .tool-form-item fluent-radio{margin:0}::deep .tool-result{margin-top:1.5rem;margin-bottom:1.5rem}

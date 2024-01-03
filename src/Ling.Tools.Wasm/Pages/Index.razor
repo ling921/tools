@@ -1,0 +1,37 @@
+﻿<PageTitle>
+    Home - Ling.Tools
+</PageTitle>
+
+<div class="tool-search">
+    <FluentSearch @bind-Value="SearchText"
+                  Autofocus="true"
+                  Placeholder="@($"{L["Search"]}...")"
+                  Spellcheck="true"
+                  Immediate="true" />
+    @* <FluentListbox TOption="ToolInfo"
+                   ValueChanged="OnToolClick">
+        <ForEach Source="FilteredTools">
+            <Template>
+                <FluentOption Value="@context.Id">
+                    @context.Name
+                </FluentOption>
+            </Template>
+        </ForEach>
+    </FluentListbox> *@
+</div>
+
+<div class="tool-list">
+    <FluentGrid OnBreakpointEnter="OnBreakpointEnterHandler"
+                Justify="JustifyContent.FlexStart"
+                Spacing="3">
+        <ForEach Source="Tools">
+            <Template>
+                <FluentGridItem xs="12" sm="6" md="4" lg="3">
+                    <FluentCard Width="100%" Height="120px">
+                        <div>@context.Name</div>
+                    </FluentCard>
+                </FluentGridItem>
+            </Template>
+        </ForEach>
+    </FluentGrid>
+</div>

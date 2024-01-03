@@ -1,0 +1,7 @@
+﻿@inherits GeneratorComponentBase<string>
+
+<div class="tool-form-item">
+    <FluentCheckbox @bind-Value="Uppercase" Label=@L["Lowercase"] />
+    <FluentNumberField @bind-Value="Length" Label="@L["Length"]" Min="0" Max="512" />
+</div>
+

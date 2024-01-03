@@ -1,0 +1,33 @@
+﻿@inherits ToolComponentBase<StringGeneratorState>
+
+<PageTitle>
+    @L["String Generator"] - Ling.Tools
+</PageTitle>
+
+<SectionContent SectionId="ToolLayout.BreadcrumbSection">
+    @L["String Generator"]
+</SectionContent>
+
+<Condition Predicate="State is not null">
+    <True>
+        <StringGenerator @ref="Generator"
+                         Length="State!.Length"
+                         HasNumber="State.HasNumber"
+                         HasLowercaseLetter="State.HasLowercaseLetter"
+                         HasUppercaseLetter="State.HasUppercaseLetter" />
+
+        <div class="tool-form-item">
+            <FluentNumberField @bind-Value="State.Times" Label="@L["Times"]" Min="0" Max="128" />
+            <FluentButton Appearance="Appearance.Accent" OnClick="Generate">
+                @L["Generate"]
+            </FluentButton>
+        </div>
+
+        <div class="tool-result">
+            <GeneratedDisplay Values="State.LastGenerated" />
+        </div>
+    </True>
+    <False>
+        <div>Loading...</div>
+    </False>
+</Condition>

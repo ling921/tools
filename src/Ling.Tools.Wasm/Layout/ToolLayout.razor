@@ -1,0 +1,18 @@
+﻿@inherits LayoutComponentBase
+@layout MainLayout
+
+<div class="breadcrumb">
+    <FluentBreadcrumb>
+        <FluentBreadcrumbItem Href="/">
+            Home
+            <FluentIcon Value="@(new Icons.Regular.Size16.Home())" Color="@Color.Neutral" Slot="start" />
+        </FluentBreadcrumbItem>
+        <FluentBreadcrumbItem>
+            <SectionOutlet SectionId="BreadcrumbSection" />
+        </FluentBreadcrumbItem>
+    </FluentBreadcrumb>
+</div>
+
+@Body
+
+<FluentMessageBarProvider Section="@AppDefaults.TOOL_MESSAGES" />

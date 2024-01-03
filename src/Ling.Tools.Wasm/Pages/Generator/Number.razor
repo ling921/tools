@@ -1,0 +1,46 @@
+﻿@inherits ToolComponentBase<NumberGeneratorState>
+
+<Condition Predicate="State is not null">
+    <True>
+        <Switch Value="State!.Type">
+            <Case When="GenerateNumberType.Int32">
+                <Int32Generator @ref="Int32Generator"
+                                MinValue="State.Int32Min"
+                                MinInclusive="State.Int32MinInclusive"
+                                MaxValue="State.Int32Max"
+                                MaxInclusive="State.Int32MaxInclusive" />
+            </Case>
+            <Case When="GenerateNumberType.Int64">
+                <Int64Generator @ref="Int64Generator"
+                                MinValue="State.Int64Min"
+                                MinInclusive="State.Int64MinInclusive"
+                                MaxValue="State.Int64Max"
+                                MaxInclusive="State.Int64MaxInclusive" />
+            </Case>
+            <Case When="GenerateNumberType.Float">
+                <FloatGenerator @ref="FloatGenerator"
+                                MinValue="State.FloatMin"
+                                MaxValue="State.FloatMax" />
+            </Case>
+            <Case When="GenerateNumberType.Double">
+                <DoubleGenerator @ref="DoubleGenerator"
+                                 MinValue="State.DoubleMin"
+                                 MaxValue="State.DoubleMax" />
+            </Case>
+        </Switch>
+
+        <div class="tool-form-item">
+            <FluentNumberField @bind-Value="State.Times" Label="@L["Times"]" Min="0" Max="128" />
+            <FluentButton Appearance="Appearance.Accent" OnClick="Generate">
+                @L["Generate"]
+            </FluentButton>
+        </div>
+
+        <div class="tool-result">
+            <GeneratedDisplay Values="State.LastGenerated" />
+        </div>
+    </True>
+    <False>
+        <div>Loading...</div>
+    </False>
+</Condition>

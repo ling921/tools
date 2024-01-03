@@ -1,0 +1,8 @@
+﻿@inherits GeneratorComponentBase<int>
+
+<div class="tool-form-item">
+    <FluentNumberField @bind-Value="MinValue" Label="@L["Minimum value"]" />
+    <FluentCheckbox @bind-Value="MaxInclusive" Label=@L["Inclusive"] />
+    <FluentNumberField @bind-Value="MaxValue" Label="@L["Maximum value"]" />
+    <FluentCheckbox @bind-Value="MaxInclusive" Label=@L["Inclusive"] />
+</div>
